@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom"
+import ItemCount from "../ItemCount/ItemCount"
 
-export default function ItemDetail({name, img, description, category, price, stock}) {
+export default function ItemDetail({id, name, img, description, category, price, stock}) {
+
+    const handleAdd = () => {
+        const objectToAdd = {
+            id, name, price
+        }
+        console.log(objectToAdd)
+    }
+
+
+
     return (
         <div className="container">
             <h2>{name}</h2>
@@ -12,7 +23,8 @@ export default function ItemDetail({name, img, description, category, price, sto
                     <p>Precio: $ {price}</p>
                     <p>Disponible: {stock}</p>
                 </div>
-                <Link to="/cart" >Finalizar compra</Link>
+                <ItemCount stock={stock} onAdd={handleAdd}/>
+                {/* <Link to="/cart" >Finalizar compra</Link> */}
             </div>
         </div>
     )

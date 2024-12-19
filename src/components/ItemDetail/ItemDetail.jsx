@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom"
+import { useCart } from "../../hooks/useCart"
 import ItemCount from "../ItemCount/ItemCount"
 
 export default function ItemDetail({id, name, img, description, category, price, stock}) {
 
+
+
     const handleAdd = () => {
         const objectToAdd = {
-            id, name, price
+            id, name, price, cantidad
         }
         console.log(objectToAdd)
     }

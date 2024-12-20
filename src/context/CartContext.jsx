@@ -16,15 +16,35 @@ export const CartProvider = ({children}) => {
         } else {
             console.log("el prod ya está en car")
         }
+        console.log(cart)
     }
     
-    const removeItem = () => {}
-    const clearCart = () => {}
-    const getTotal = () => {}
-    // const getTotalQuantity = () => {}
-    // const totalQuantity = getTotalQuantity()
-    const totalQuantity = 6
-    
+    const removeItem = (id) => {
+        const cartUpdated = cart.filter((prod)=> prod.id !== id)
+        setCart(cartUpdated)
+    }
+
+    const clearCart = () => {
+        setCart([])
+    }
+
+    const getTotal = () => {
+        let accu = 0
+        cart.forEach((item)=>{
+            accu += item.quantity * item.price
+        })
+        return accu
+    }
+
+    const getTotalQuantity = () => {
+        let accu = 0
+        cart.forEach((product) => {
+            accu += product.quantity
+        })
+        return accu
+    }
+
+    const totalQuantity = getTotalQuantity()
 
     const obj = {
         cart,

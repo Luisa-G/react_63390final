@@ -16,16 +16,13 @@ export default function NavBar({title}) {
                     <Link className="nav-link active" aria-current="page" to="/">Todos los productos</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/category/celular">Celulares</Link>
+                    <Link className="nav-link" to="/category/cuaderno">Cuadernos</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/category/tablet">Tablets</Link>
+                    <Link className="nav-link" to="/category/pluma">Plumas</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/category/computer">Computadoras</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" to="/contacto">Contacto</Link>
+                    <Link className="nav-link" to="/category/herramienta">Herramientas</Link>
                     </li>
                 </ul>
                 <CartWidget cartCount={1}/>

@@ -9,7 +9,7 @@ export default function Item({product}) {
                 <h2 className="card-title">{product.name}</h2>
                 <p>{product.price}</p>
                 <p>{product.description}</p>
-                <Link to={`/detail/${product.id}`} className="btn btn-primary"/>Ver detalle
+                <Link to={`/detail/${product.id}`} className="btn btn-outline-info">Ver detalle</Link>
             </div>
         </div>
     )

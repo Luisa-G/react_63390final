@@ -5,7 +5,6 @@ import { useState } from "react"
 export default function ItemCount({initialValue=1, stock, onAdd}) {
     const [cantidad, setCantidad] = useState(initialValue)
 
-    // const {addItem} = useCart()
     
     const restar = () => {
         if (cantidad > 1) {

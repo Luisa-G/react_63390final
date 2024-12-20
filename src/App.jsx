@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider >
-        <NavBar title='El mundo de papel'/>
+        <NavBar title='El mundo del papel'/>
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/category/:categoryId" element={<ItemListContainer/>} />
